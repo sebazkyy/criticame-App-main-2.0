@@ -1,0 +1,25 @@
+ion-avatar {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.map {
+  margin-top: 50px;
+  height: 55vh;
+}
+
+.map img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.content ion-button {
+  width: 50%;
+}
+
+ion-col {
+  text-align: center;
+  margin: 50px auto;
+}

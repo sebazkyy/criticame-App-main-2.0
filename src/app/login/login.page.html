@@ -19,62 +19,33 @@
 
     <form [formGroup]="formularioLogin" (ngSubmit)="guardar()">
       <ion-row>
-        <ion-input
-          color="tertiary"
-          label="Usuario"
-          label-placement="floating"
-          fill="outline"
-          placeholder="Ingrese usuario"
-          maxLength="15"
-          formControlName="usuario"
-        >
-          <ion-icon
-            size="large"
-            color="tertiary"
-            slot="start"
-            name="person-outline"
-          ></ion-icon>
+        <ion-input color="tertiary" label="Usuario" label-placement="floating" fill="outline"
+          placeholder="Ingrese usuario" maxLength="15" formControlName="usuario">
+          <ion-icon size="large" color="tertiary" slot="start" name="person-outline"></ion-icon>
         </ion-input>
       </ion-row>
       <br />
       <ion-row>
-        <ion-input
-          color="tertiary"
-          label="Contraseña"
-          label-placement="floating"
-          fill="outline"
-          placeholder="Ingrese contraseña"
-          formControlName="contrasena"
-          [type]="passwordType"
-        >
+        <ion-input color="tertiary" label="Contraseña" label-placement="floating" fill="outline"
+          placeholder="Ingrese contraseña" formControlName="contrasena" [type]="passwordType">
           <ion-icon size="large" slot="start" name="lock-closed-outline"></ion-icon>
-          <ion-icon
-            slot="end"
-            [name]="passwordIcon"
-            (click)="togglePasswordVisibility()"
-          ></ion-icon>
+          <ion-icon slot="end" [name]="passwordIcon" (click)="togglePasswordVisibility()"></ion-icon>
         </ion-input>
       </ion-row>
       <br />
-      <ion-button type="submit" expand="block" size="large" shape="round"
-        >Ingresar
+      <ion-button type="submit" expand="block" size="large" shape="round">Ingresar
       </ion-button>
       <br />
     </form>
     <ion-row>
       <ion-col class="ion-text-center">
-        <ion-router-link routerLink="/recuperar-contrasena"
-          >¿Olvidaste tu contraseña?</ion-router-link
-        >
+        <ion-router-link routerLink="/recuperar-contrasena">¿Olvidaste tu contraseña?</ion-router-link>
       </ion-col>
     </ion-row>
-    
-    
+
     <ion-row>
-      <ion-col>
-        <ion-button  size="large" shape="round" color="tertiary" (click)="ingresarComoInvitado()">
-          Ingresar como invitado
-        </ion-button>
+      <ion-col class="ion-text-center">
+        <ion-router-link routerLink="/home" (click)="ingresarComoInvitado()">Ingresar como invitado</ion-router-link>
       </ion-col>
     </ion-row>
 
